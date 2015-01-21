@@ -1,0 +1,34 @@
+<header class='SoundLink'>
+    <h2>CREATE YOUR OWN SESSION</h2>
+    <p >Sound-Link</p>
+</header>
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+
+<% if @session.errors.any? %>
+  <ul>
+    <% @session.errors.full_messages.each do |error_message| %>
+    <li> <%= error_message %> </li>
+    <% end %> 
+  </ul>
+<% end %>
+
+<section id='session'>  
+  <%= form_for [@user, @session] do |f| %>
+    <div class="field">
+      <%= f.label :session_name %></br>
+      <%= f.text_field :session_name %></br>
+      <%= f.label :description %></br>
+      <%= f.text_area(:description, size:'50x10') %></br>
+    </div>
+    <div class="actions">
+     <%= f.submit 'Create', :class => 'button' %>
+    </div>
+  <% end %>
+  <%= link_to "Cancel", user_sessions_path(@user), :class => 'title' %>
+</section>
+<footer>
+    <div class='title'><h3>by Franx0</h3></div>
+</footer>

@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Audio:</strong>
+  <%= @track.name %>
+</p>
+
+<audio id='<%= session.id %>' class="player" src='<%= @track.audio %>' controls></audio>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>

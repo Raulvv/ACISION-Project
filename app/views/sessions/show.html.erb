@@ -1,0 +1,33 @@
+<h1><%= @session.session_name %> is ready</h1>
+<h1>Enjoy it!</h1>
+<h3><%= @session.session_name %></h1>
+<p><%= @session.description %></p>
+<%= link_to 'Add new track', new_user_session_track_path(@user, @session, @track) %>
+<%= link_to "Go back to your sessions!", user_sessions_path(@user) %>
+
+<section id='session'>
+    <h3><%= session.session_name %></h3>
+    <div id='description'>
+        <p><%= session.description %></p>
+    </div>
+    <ul>
+        <% session.tracks.each do |track| %>
+            <% if track.audio_content_type!=nil %>
+                <li>
+                    <p class='trackname'><%= track.name %></p>
+                    <audio id='<%= session.id %>' class="player" src='<%= track.audio %>' controls></audio>
+                    <input id='<%= session.id %>' class="time" type="number" value=0>seg.</input>
+            <% else %>
+                <p>There isn't any record in your session</p>
+            <% end %>
+        <% end %>
+    </ul>
+    <div id='<%= session.id %>' class='btn-play button'>Play session</div>
+    <div id='<%= session.id %>' class='btn-pause button'>Pause session</div>
+    <div id='<%= session.id %>' class='btn-stop button'>Stop session</div>
+    
+<div id='links'>
+    <%= link_to 'Edit', edit_user_session_path(@user, session) %>
+    <%= link_to 'Remove session', user_session_path(@user, session), method: :delete, data: {confirm: "Are you sure?"} %>
+</div>
+</section>

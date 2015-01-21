@@ -1,0 +1,133 @@
+html, body{
+    width: 1980px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url('/assets/fondo.png')
+}
+
+header{
+    width: auto;
+    height: 60px;
+    margin: 0;
+    background-color: #E8DAB5;
+}
+.SoundLink{
+    height:90px;
+}
+.SoundLink p{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #A63600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.SoundLink h2{
+    padding:15px;
+    margin:0;
+}
+
+.title{
+    width: 400px;
+    margin: 0 10px;
+    color: #E8DAB5;
+    text-decoration: none;
+}
+
+.title:active{
+    color: #E8DAB5;
+}
+
+.title:visited{
+    color: #FFFFFF;
+}
+
+#session{
+    width: 500px;
+    margin: 5px auto;
+    display: block;
+    vertical-align: top;
+    background-color: #E8D5A3;
+    border: solid #2B271D;
+    border-radius: 10px;
+}
+#session h3{
+    margin: 5px 0px 0px 25px;
+}
+
+#openSession section{
+    display: inline-block;    
+}
+
+#links{
+    width: 500px;
+    text-align: center;
+    margin: 5px auto;
+}
+
+#links a{
+    font: helvetica;
+    color: #000;
+    text-decoration: none;
+}
+
+#description{
+    width: 450px;
+    display: block;
+    margin: 0 auto;
+    padding: 3px;
+    background-color: #E8DAB5;
+    border-radius: 10px;
+    word-wrap: break-word;
+}   
+
+.trackname {
+    margin: 5px 0px 0px 25px;
+}
+
+#session audio{
+    margin: 5px 0px 0px 25px;
+}
+
+.time{
+    width: 40px;
+}
+
+.button{
+    height: 25px;
+    display: inline-block;
+    margin: 5px;
+    padding:5px;
+    border: solid #2B271D 2px;
+    border-radius: 15px;
+    background-color: #E8DAB5;
+    text-align: center;
+    color: #000;
+    word-wrap: break-word;
+    text-decoration:none; 
+    cursor: pointer;
+    /*overflow: auto;*/
+}
+
+.hidden{
+    display: none;
+}
+
+.field{
+    width: 450px;
+    display: block;
+    margin: 5px auto;
+    padding: 3px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    margin: 0 auto;
+    background-color: #000;
+    bottom: 0;
+    text-align:center;
+}

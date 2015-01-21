@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SoundLink</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag 'application', :defer => "defer" %>
+  <%= javascript_include_tag "//cdn.webrtc-experiment.com/RecordRTC.js", :defer => "defer" %>
+  <%= javascript_include_tag '//cdn.webrtc-experiment.com/ffmpeg_asm.js', :defer => "defer" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    
+<%= yield %>
+
+</body>
+</html>
